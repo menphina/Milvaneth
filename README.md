@@ -25,3 +25,25 @@ Now - Early Jul: Closed test and first release.
 Early Jul - Mid Aug: Open test and initial data collection.
 
 Mid Aug - Later: TBD
+
+# TODOs
+
+Goals listed here will be implemented step by step after first release:
+
+- [ ] Website interface
+
+- [ ] ACT plugin version
+
+- [ ] Companion App CN API (Currently not available)
+
+- [ ] Monitoring and alerting
+
+- [ ] Account/retainer based listing
+
+- [ ] Support for PM and buyer/seller chat (after account listing is implemented)
+
+- [ ] "Best for company seal" and "Best for reconstruction" calculator
+
+- [ ] Ingredient price calculator
+
+- [ ] and so on ...
