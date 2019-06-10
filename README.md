@@ -16,7 +16,7 @@ Due to the possibility of abuse of related technologies, Milvaneth will adopt a 
 
 Milvaneth service will be public available and free-to-use. It may accept donations after formal operation.
 
-Since players in CN region do not need to pay for the base game and expansion packs, and per-account cost is $0.09/hr playtime. The estimated operating cost of Milvaneth will be lower than similar services in JEDF regions.
+Since players in CN region do not need to pay for the base game and expansion packs, and per-account cost is $0.09/hr playtime. The estimated operating cost of Milvaneth will be lower than similar services in JP/US/EU regions.
 
 # Time frame
 
