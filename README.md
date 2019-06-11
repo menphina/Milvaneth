@@ -12,7 +12,7 @@ Due to the possibility of abuse of related technologies, Milvaneth will adopt a 
 
 3. Components that do not meet the above criteria, such as packet analyzers and user interface parts, will be open source.
 
-(\*) Once an open source alternative appears, they will be made public.
+(\*) Once an open source alternative appears, the corresponding component will be made public.
 
 # About the service
 
