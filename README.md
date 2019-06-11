@@ -6,11 +6,13 @@ Project Milvaneth, named after [Milvaneth Sacrarium in Ul'dah](https://ffxiv.gam
 
 Due to the possibility of abuse of related technologies, Milvaneth will adopt a semi-open source strategy:
 
-1. Dual-use components with no currently open sourced alternatives, such as memory analyzers and some other components, will have access restrictions on source code and may apply anti-reverse engineering measures on object code.
+1. Dual-use components with no currently open sourced alternatives, such as memory analyzers and some other components, will have access restrictions on source code and may apply anti-reverse engineering measures on object code.*
 
 2. Implementations of predictive or statistical algorithms, if any, will be open source if the algorithm itself has been made public.
 
 3. Components that do not meet the above criteria, such as packet analyzers and user interface parts, will be open source.
+
+* Once an open source alternative appears, they will be made public.
 
 # About the service
 
