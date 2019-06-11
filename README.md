@@ -28,6 +28,8 @@ Early Jul - Mid Aug: Open test and initial data collection.
 
 Mid Aug - Later: TBD
 
+The formal start of operation will not be later than the 4.57 CN version update.
+
 # TODOs
 
 Goals listed here will be implemented step by step after first release:
