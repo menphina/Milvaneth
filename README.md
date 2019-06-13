@@ -14,6 +14,8 @@ Due to the possibility of abuse of related technologies, Milvaneth will adopt a 
 
 (\*) Once an open source alternative appears, the corresponding component will be made public.
 
+Milvaneth's source code is expected to be released under the Ms-PL (Microsoft Public License) license. Ms-PL is a weak copyleft license from Microsoft.
+
 # About the service
 
 Milvaneth service will be public available and free-to-use. It may accept donations after formal operation.
