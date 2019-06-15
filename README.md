@@ -4,7 +4,7 @@ Project Milvaneth, named after [Milvaneth Sacrarium in Ul'dah](https://ffxiv.gam
 
 # Languages
 
-您可以在[这里](https://github.com/menphnia/Milvaneth/blob/master/README.md)查阅中文版本的 README 文件。
+您可以在[这里](https://github.com/menphnia/Milvaneth/blob/master/README-zh-cn.md)查阅中文版本的 README 文件。
 
 If there is a content difference, the Chinese version of README shall prevail.
 
