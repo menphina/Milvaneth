@@ -2,6 +2,13 @@
 
 Project Milvaneth, named after [Milvaneth Sacrarium in Ul'dah](https://ffxiv.gamerescape.com/wiki/Milvaneth_Sacrarium), is the Chinese version of cross-world market infomation sharing platform (just like mogboard.com). Which, since there is currently no Companion App available for Chinese players (though Live Letter CN said it's WIP months ago), Milvaneth will develop a separate market data fetching technology, and will support Companion App CN API as soon as possible once it is released.
 
+# Languages
+
+您可以在[这里](https://github.com/menphnia/Milvaneth/blob/master/README.md)查阅中文版本的 README 文件。
+
+If there is a content difference, the Chinese version of README shall prevail.
+如存在内容差异，以中文版本的 README 为准。
+
 # Open source policy
 
 Due to the possibility of abuse of related technologies, Milvaneth will adopt a semi-open source strategy:
