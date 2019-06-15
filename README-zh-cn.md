@@ -1,6 +1,6 @@
 # Milvaneth
 
-Milvaneth 计划，取名自[乌尔达哈的密尔瓦内斯礼拜堂](https://ffxiv.gamerescape.com/wiki/Milvaneth_Sacrarium)，是中国版本的跨服物价共享平台（类似国际服的 mogboard.com）。由于国服目前没有手机 App（丝瓜：在做了在做了），Milvaneth 计划会独立研发一套新的物价获取技术，并在 App 发布时尽快支持通过 App 接口获取物价信息。
+Milvaneth 计划，取名自[乌尔达哈的密尔瓦内斯礼拜堂](https://ffxiv.gamerescape.com/wiki/Milvaneth_Sacrarium)，是中国版本的跨服市场信息共享平台（类似国际服的 mogboard.com）。由于国服目前没有手机 App（丝瓜：在做了在做了），Milvaneth 计划会独立研发一套新的物价获取技术，并在 App 发布时尽快支持通过 App 接口获取物价信息。
 
 # Languages
 
