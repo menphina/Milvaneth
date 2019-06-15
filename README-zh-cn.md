@@ -28,7 +28,7 @@ If there is a content difference, the Chinese version of README shall prevail.
 
 Milvaneth 是一个公开且免费的公益项目。可能会在正式运营后接受捐赠。
 
-Milvaneth 目前预计不会采用增值付费制。但，出于运行成本或者个人经济状况限制，不排除在不损害既有免费用户权益的情况下推出增值服务。
+Milvaneth 在可预见的未来中不会采用增值付费制。但，出于运行成本或者个人经济状况限制，不排除在不损害既有免费用户权益的情况下推出增值服务。
 
 # 时间框架
 
