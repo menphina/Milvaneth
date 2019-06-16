@@ -22,7 +22,7 @@ Due to the possibility of abuse of related technologies, Milvaneth will adopt a 
 
 (\*) Once an open source alternative appears, the corresponding component will be made public.
 
-Milvaneth's source code is expected to be released under the Ms-PL (Microsoft Public License) license. Ms-PL is a weak copyleft license from Microsoft.
+Milvaneth's source code is expected to be released under the MIT/X11 license.
 
 # About the service
 
@@ -46,7 +46,7 @@ Goals listed here will be implemented step by step after first release:
 
 - [ ] Website interface
 
-- [ ] ACT plugin version
+- [ ] ~~ACT plugin version~~
 
 - [ ] Companion App CN API (Currently not available)
 
