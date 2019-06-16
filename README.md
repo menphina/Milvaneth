@@ -46,15 +46,15 @@ Goals listed here will be implemented step by step after first release:
 
 - [ ] Website interface
 
-- [ ] ~~ACT plugin version~~
+- [ ] ~~ACT plugin version~~ (Most Chinese players use a custom build of ACT which has different codebase)
 
-- [ ] Companion App CN API (Currently not available)
+- [ ] ~~Companion App CN API~~ (Currently not available)
 
 - [ ] Monitoring and alerting
 
 - [ ] Account/retainer based listing
 
-- [ ] Support for PM and buyer/seller chat (after account listing is implemented)
+- [ ] ~~Support for PM and buyer/seller chat~~ (after account listing is implemented)
 
 - [ ] "Best for company seal" and "Best for reconstruction" calculator
 
