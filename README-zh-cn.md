@@ -4,7 +4,7 @@ Milvaneth 计划，取名自[乌尔达哈的密尔瓦内斯礼拜堂](https://ff
 
 # Languages
 
-You can view English version of README [here](https://github.com/menphnia/Milvaneth/blob/master/README.md).
+You can view English version of README [here](https://github.com/menphina/Milvaneth/blob/master/README.md).
 
 If there is a content difference, the Chinese version of README shall prevail.
 
