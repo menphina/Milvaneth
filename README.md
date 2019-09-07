@@ -32,13 +32,9 @@ Since players in CN region do not need to pay for the base game and expansion pa
 
 # Time frame
 
-Now - Early Jul: Closed test and first release.
+Test has started.
 
-Early Jul - Mid Aug: Open test and initial data collection.
-
-Mid Aug - Later: TBD
-
-The formal start of operation will not be later than the 4.57 CN version update.
+Will release on 10/15/2019
 
 # TODOs
 
