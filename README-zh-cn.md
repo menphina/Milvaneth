@@ -18,6 +18,18 @@ If there is a content difference, the Chinese version of README shall prevail.
 
 Milvaneth 项目的源代码以 MIT/X11 许可证分发。
 
+# 子项目
+
+Milvaneth.Cmd: 一个健壮的游戏状态机。支持在正确的时机启停网络和内存访问，支持在任意时机介入游戏进程。
+
+Thaliak: 角色数据和物品信息内存读取器。
+
+Thaliak.Network: 市场数据和其他数据网络读取器。
+
+Thaliak.Writer: 内存签名、网络包 Id 及杂项。
+
+Milvaneth.Server: 一个支持市场数据 CRUD 的服务器端 API 实现。
+
 # 维护状况
 
 本项目将不再跟随 FF14 国服客户端的版本更新进行升级，但我会响应PR和Issue。
