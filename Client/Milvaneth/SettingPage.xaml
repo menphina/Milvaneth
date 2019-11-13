@@ -1,0 +1,88 @@
+﻿<Page x:Class="Milvaneth.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Milvaneth"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingPage">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <CheckBox Content="自动检查更新" IsChecked="{Binding ConfAutoUpdate, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="显示悬浮窗" IsChecked="{Binding ConfShowOverlay, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="悬浮窗点击穿透" IsChecked="{Binding ConfClickthough, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="允许上传用量信息" IsChecked="{Binding ConfUploadDetail, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="开机时启动程序" IsChecked="{Binding ConfRunStartup, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="最小化到系统托盘" IsChecked="{Binding ConfMinimizeToTray, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="关闭窗体时完全退出" IsChecked="{Binding ConfFullExit, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="启用配方成本计算（实验性）" IsChecked="{Binding ConfEnableRecipe, Mode=TwoWay}" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="启用制作收益追踪（实验性）" IsChecked="{Binding ConfEnableArtisan, Mode=TwoWay}" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="启用Roll点收益预算（实验性）" IsChecked="{Binding ConfEnableLoot, Mode=TwoWay}" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,10,0,0" Height="25" VerticalAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <CheckBox Content="自动附加到新进程" IsChecked="{Binding ConfAutoAttach, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="包含调试信息至日志" IsChecked="{Binding ConfLogDebugInfo, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="包含游戏记录至日志" IsChecked="{Binding ConfLogChatLogContent, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="启用父进程检测" IsChecked="{Binding ConfUseParent, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="禁用资源预加载" IsChecked="{Binding ConfNotUseHunter, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="多开游戏支持" IsChecked="{Binding ConfEnableMultiSupport, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="允许开发者指令输入" IsChecked="{Binding ConfEnableDevConsole, Mode=TwoWay}" Visibility="Collapsed" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid Margin="10,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Name="GamePidList" VerticalAlignment="Center" Height="0" Margin="0,0,0,0" Grid.Column="0"/>
+                    <Button Content="附加" Margin="10,0,10,0" Grid.Column="1" Click="Button_Attach_Game"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Button Content="检查更新" Margin="10,10,10,0" Grid.Row="0" Click="Button_Check_Update"/>
+                <Button Content="账户管理" Margin="10,10,10,0" Grid.Row="1" Click="Button_Account_Login"/>
+                <Button Content="访问网站" Margin="10,10,10,0" Grid.Row="2" Click="Button_View_Website"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Button Content="打开配置文件夹" Margin="10,10,10,0" Grid.Row="0" Click="Button_Open_Folder"/>
+                <Button Content="选择悬浮窗插件" Margin="10,10,10,0" Grid.Row="1" Click="Button_Select_Overlay"/>
+                <Button Content="设置 API 访问点" Margin="10,10,10,0" Grid.Row="2" Click="Button_Set_Endpoint"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

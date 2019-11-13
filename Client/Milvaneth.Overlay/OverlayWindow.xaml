@@ -1,0 +1,120 @@
+﻿<overlay:OverlayBase x:Class="Milvaneth.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Milvaneth"
+        xmlns:overlay="clr-namespace:Milvaneth.Overlay;assembly=Milvaneth"
+        mc:Ignorable="d" Style="{x:Null}"
+        Title="OverlayWindow"
+        MinHeight="50" MinWidth="500" 
+        AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False"
+        Height="{Binding OverlayHeight, Mode=TwoWay}"
+        Width="{Binding OverlayWidth, Mode=TwoWay}"
+        Left="{Binding OverlayLeft, Mode=TwoWay}"
+        Top="{Binding OverlayTop, Mode=TwoWay}">
+    <Window.Background>
+        <SolidColorBrush Color="#000000" Opacity="0" />
+    </Window.Background>
+
+    <Grid Name="MainGrid" Background="#80000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Border Background="#40000000" Grid.Row="0">
+            <Grid Name="Header">
+                <StackPanel Orientation="Horizontal">
+                    <Image Name="ItemIcon" HorizontalAlignment="Left" Margin="5,5,0,5" Source="{Binding ItemIcon, Mode=OneWay}"/>
+                    <StackPanel Margin="10,5,0,5" >
+                        <TextBlock Text="{Binding ItemName, Mode=OneWay}" Foreground="White" FontSize="18"/>
+                        <TextBlock Text="{Binding FormattedMinPrice, Mode=OneWay}" Foreground="White" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <StackPanel VerticalAlignment="Center" Margin="0,0,10,0" >
+                        <TextBlock Text="{Binding FormattedListInfo, Mode=OneWay}" HorizontalAlignment="Right" Foreground="White" FontSize="12"/>
+                        <TextBlock Text="{Binding FormattedHistInfo, Mode=OneWay}" Foreground="White" HorizontalAlignment="Right" FontSize="12"/>
+                        <TextBlock Text="{Binding FormattedUpdateInfo, Mode=OneWay}" Foreground="White" HorizontalAlignment="Right" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" Background="Transparent">
+            <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
+        <Border Background="#40000000" Grid.Row="2">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="ListTab" Text="在售列表" VerticalAlignment="Center" Foreground="White" FontSize="12" Padding="5" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#20000000"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding OverlayActiveTab}" Value="0">
+                                        <Setter Property="Background" Value="#40000000"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <TextBlock x:Name="HistTab" Text="成交记录" VerticalAlignment="Center" Foreground="White" FontSize="12" Padding="5" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#20000000"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding OverlayActiveTab}" Value="1">
+                                        <Setter Property="Background" Value="#40000000"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <TextBlock x:Name="ListGraph" Text="在售图表" VerticalAlignment="Center" Foreground="White" Visibility="Collapsed"
+                               FontSize="12" Padding="5" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#20000000"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding OverlayActiveTab}" Value="2">
+                                        <Setter Property="Background" Value="#40000000"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <TextBlock x:Name="HistGraph" Text="成交图表" VerticalAlignment="Center" Foreground="White" Visibility="Collapsed"
+                               FontSize="12" Padding="5" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#20000000"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding OverlayActiveTab}" Value="3">
+                                        <Setter Property="Background" Value="#40000000"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </StackPanel>
+                <Polygon HorizontalAlignment="Right" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" Margin="0,0,0,0" Points="1,0 0,1 1,1" Fill="#60000000" Stretch="Fill"/>
+            </Grid>
+        </Border>
+    </Grid>
+</overlay:OverlayBase>

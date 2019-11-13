@@ -1,0 +1,29 @@
+﻿<Page x:Class="Milvaneth.Subwindow.PageLogin2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Milvaneth.Subwindow"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d" 
+      d:DesignHeight="280" d:DesignWidth="600"
+      Title="PageLogin2">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <PasswordBox Name="Password" Style="{StaticResource PasswordBoxExtend}" hc:InfoElement.Placeholder="请输入您的密码" hc:InfoElement.Title="密码" hc:InfoElement.Necessary="True" HorizontalAlignment="Center" Height="60" Margin="0,-30,0,0" VerticalAlignment="Center" Width="180"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,15,20">
+            <Button Content="取消" Margin="5,0" Height="30" Width="60" Click="Button_Click"/>
+            <Button Content="上一步" Margin="5,0" Height="30" Width="60" Click="Button_Click_1"/>
+            <Button Content="登录" Margin="5,0" Height="30" Width="60" Click="Button_Click_2"/>
+        </StackPanel>
+    </Grid>
+</Page>

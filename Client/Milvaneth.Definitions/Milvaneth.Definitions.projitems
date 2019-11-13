@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>af462dc6-1d8c-418c-8c94-69ddd03171c1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Milvaneth.Definitions</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Auth\AuthRenew.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Auth\AuthRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Auth\AuthResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Data\AccountStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Data\AccountUpdate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Data\OverviewRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Data\OverviewResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Data\PackedResultBundle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\IMilvanethData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\IMilvanethResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Login\ClientChallenge.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Login\ClientResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Login\ServerChallenge.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Login\ServerResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\MilvanethContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\MilvanethProtocol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Recovery\RecoveryEmail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Recovery\RecoveryGame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Recovery\RecoveryRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Register\RegisterForm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Version\VersionDownload.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communication\Version\VersionInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SafeDateTime.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ArtisanInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ArtisanResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ChatlogLine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ChatlogResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\CurrentWorldResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryContainerId.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryContainerOffset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryContainerTypeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\InventoryResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\IResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\LobbyCharacterItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\LobbyCharacterResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\LobbyServiceResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketHistoryItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketHistoryResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketListingItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketListingResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketOverviewItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketOverviewResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\MarketRequestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\PackedResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\PackedResultType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerHistoryItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerHistoryResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerInfoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerInfoResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerUpdateItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RetainerUpdateResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\StatusCharaInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\StatusLevelInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\StatusResult.cs" />
+  </ItemGroup>
+</Project>

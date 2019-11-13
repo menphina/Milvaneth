@@ -1,0 +1,13 @@
+﻿<Window x:Class="Milvaneth.Initializing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Milvaneth"
+        mc:Ignorable="d"
+        AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Background="Transparent"
+        Title="Milvaneth 初始化中" Width="128" Height="128">
+    <Grid>
+        <Image Name="Image" Source="milvaneth_all.ico"/>
+    </Grid>
+</Window>

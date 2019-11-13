@@ -1,0 +1,37 @@
+﻿<Page x:Class="Milvaneth.LogPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Milvaneth"
+      xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Xaml"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LogPage" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="LogText" Text="{Binding LogLines, Mode=OneWay}" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" VerticalContentAlignment="Top" TextChanged="LogText_OnTextChanged"/>
+        <Grid Grid.Row="1" Margin="5,5,5,5">
+            <TextBox Name="CommandInput" Margin="0,0,0,0" Text="{Binding LogCommandLine, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding ConfEnableDevConsole, Mode=OneWay}">
+                <TextBox.InputBindings>
+                    <KeyBinding Key="Return" 
+                                Command="{Binding LogCommandLineEnterCommand}"/>
+                </TextBox.InputBindings>
+            </TextBox>
+        </Grid>
+    </Grid>
+</Page>

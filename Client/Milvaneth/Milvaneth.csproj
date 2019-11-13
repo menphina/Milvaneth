@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D17F028-684D-4922-B045-1C69C82DEF22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Milvaneth</RootNamespace>
+    <AssemblyName>Milvaneth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>milvaneth_all.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControl.2.1.0\lib\net45\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.8.0\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Initializing.xaml.cs">
+      <DependentUpon>Initializing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interactive\InlineLogic.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Overlay\HistoryData.cs" />
+    <Compile Include="Overlay\IMarketData.cs" />
+    <Compile Include="Overlay\ListingData.cs" />
+    <Compile Include="Overlay\OverlayBase.cs" />
+    <Compile Include="ItemOverviewPage.xaml.cs">
+      <DependentUpon>ItemOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogPage.xaml.cs">
+      <DependentUpon>LogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Overlay\OverlayLoader.cs" />
+    <Compile Include="Overlay\OverviewData.cs" />
+    <Compile Include="Service\BindingRouter.cs" />
+    <Compile Include="Service\LoggingManagementService.cs" />
+    <Compile Include="Service\DictionaryManagementService.cs" />
+    <Compile Include="Service\SubprocessManagementService.cs" />
+    <Compile Include="Service\SystemManagementService.cs" />
+    <Compile Include="Service\TransmittingManagementService.cs" />
+    <Compile Include="SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service\IconManagementService.cs" />
+    <Compile Include="Subwindow\AccountManagement.xaml.cs">
+      <DependentUpon>AccountManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageAccountInfo.xaml.cs">
+      <DependentUpon>PageAccountInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageChange1.xaml.cs">
+      <DependentUpon>PageChange1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageChange2.xaml.cs">
+      <DependentUpon>PageChange2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageConsent.xaml.cs">
+      <DependentUpon>PageConsent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageLoggedIn.xaml.cs">
+      <DependentUpon>PageLoggedIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageLoggedOut.xaml.cs">
+      <DependentUpon>PageLoggedOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageLogin1.xaml.cs">
+      <DependentUpon>PageLogin1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageLogin2.xaml.cs">
+      <DependentUpon>PageLogin2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecovery1.xaml.cs">
+      <DependentUpon>PageRecovery1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecovery2.xaml.cs">
+      <DependentUpon>PageRecovery2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecoveryAccount1.xaml.cs">
+      <DependentUpon>PageRecoveryAccount1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecoveryEmail1.xaml.cs">
+      <DependentUpon>PageRecoveryEmail1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecoveryEmail2.xaml.cs">
+      <DependentUpon>PageRecoveryEmail2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRecoveryEntry.xaml.cs">
+      <DependentUpon>PageRecoveryEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRegister1.xaml.cs">
+      <DependentUpon>PageRegister1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageRegister2.xaml.cs">
+      <DependentUpon>PageRegister2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\PageWelcome.xaml.cs">
+      <DependentUpon>PageWelcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Subwindow\SubwindowDataCollector.cs" />
+    <Compile Include="Subwindow\SubwindowNavigator.cs" />
+    <Compile Include="Subwindow\SubwindowRouter.cs" />
+    <Compile Include="Utilities\FixedSizedQueue.cs" />
+    <Compile Include="Utilities\MoseDownHelper.cs" />
+    <Compile Include="Utilities\SupportStatic.cs" />
+    <Compile Include="ViewModel\OverviewPresenterViewModel.cs" />
+    <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Initializing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemOverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\AccountManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageAccountInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageChange1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageChange2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageConsent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageLoggedIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageLoggedOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageLogin1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageLogin2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecovery1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecovery2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecoveryAccount1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecoveryEmail1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecoveryEmail2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRecoveryEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRegister1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageRegister2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Subwindow\PageWelcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="milvaneth_all.ico" />
+    <Resource Include="milvaneth_small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="milvaneth_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asserts\hq_layer_mask.png" />
+    <None Include="Asserts\not_found.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="about.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Milvaneth.Common\Milvaneth.Common.csproj">
+      <Project>{aebbcbb3-7fa1-4721-bf9c-b7ca0b2401d5}</Project>
+      <Name>Milvaneth.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Milvaneth.Communication\Milvaneth.Communication.csproj">
+      <Project>{a231332e-90e5-41dc-ab64-06720824ba73}</Project>
+      <Name>Milvaneth.Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

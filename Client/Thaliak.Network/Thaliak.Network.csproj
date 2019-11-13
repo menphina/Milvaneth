@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FFC0D75-C761-4883-B4EA-590B28B23595}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thaliak.Network</RootNamespace>
+    <AssemblyName>Thaliak.Network</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.8.0\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyzer\AnalyzedPacket.cs" />
+    <Compile Include="Analyzer\IAnalyzerOutput.cs" />
+    <Compile Include="Filter\MessageAttribute.cs" />
+    <Compile Include="Analyzer\PacketAnalyzer.cs" />
+    <Compile Include="Analyzer\TCPFlags.cs" />
+    <Compile Include="Analyzer\TCPPacket.cs" />
+    <Compile Include="Dispatcher\MessageDecodedDelegate.cs" />
+    <Compile Include="Dispatcher\MessageDispatcher.cs" />
+    <Compile Include="Dispatcher\RoutedMessage.cs" />
+    <Compile Include="Filter\FilterOperator.cs" />
+    <Compile Include="Filter\Filters.cs" />
+    <Compile Include="Filter\PropertyFilter.cs" />
+    <Compile Include="GameNetworkMonitor.cs" />
+    <Compile Include="Messages\NetworkClientTrigger.cs" />
+    <Compile Include="Messages\NetworkInventoryModify.cs" />
+    <Compile Include="Messages\NetworkItemInfo.cs" />
+    <Compile Include="Messages\NetworkItemInfoEnd.cs" />
+    <Compile Include="Messages\NetworkItemPriceInfo.cs" />
+    <Compile Include="Messages\NetworkLobbyService.cs" />
+    <Compile Include="Messages\NetworkLobbyCharacter.cs" />
+    <Compile Include="Messages\NetworkLogout.cs" />
+    <Compile Include="Messages\NetworkLogoutCancel.cs" />
+    <Compile Include="Messages\NetworkRequestRetainer.cs" />
+    <Compile Include="Messages\NetworkRetainerHistory.cs" />
+    <Compile Include="Messages\NetworkRetainerSumEnd.cs" />
+    <Compile Include="Messages\NetworkRetainerSummary.cs" />
+    <Compile Include="Messages\NetworkUpdateHpMpTp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dispatcher\NetworkMessageProcessor.cs" />
+    <Compile Include="Dispatcher\INetworkMessageBase.cs" />
+    <Compile Include="Messages\NetworkCharacterName.cs" />
+    <Compile Include="Messages\NetworkMarketHistory.cs" />
+    <Compile Include="Messages\NetworkMarketListing.cs" />
+    <Compile Include="Messages\NetworkMarketListingCount.cs" />
+    <Compile Include="Messages\NetworkMarketResult.cs" />
+    <Compile Include="Dispatcher\NetworkMessageHeader.cs" />
+    <Compile Include="Analyzer\NetworkPacketHeader.cs" />
+    <Compile Include="Messages\NetworkPlayerSpawn.cs" />
+    <Compile Include="Sniffer\BufferManager.cs" />
+    <Compile Include="Utilities\Blowfish.cs" />
+    <Compile Include="Utilities\Connection.cs" />
+    <Compile Include="Utilities\ConnectionPicker.cs" />
+    <Compile Include="Utilities\ConsumerSearcher.cs" />
+    <Compile Include="Utilities\FilterBuilder.cs" />
+    <Compile Include="Sniffer\ISnifferOutput.cs" />
+    <Compile Include="Sniffer\IPPacket.cs" />
+    <Compile Include="Utilities\MessageIdRetriver.cs" />
+    <Compile Include="Utilities\NetworkInterfaceInfo.cs" />
+    <Compile Include="Sniffer\SocketSniffer.cs" />
+    <Compile Include="Utilities\SystemInformation.cs" />
+    <Compile Include="Sniffer\TimestampedData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Milvaneth.Common\Milvaneth.Common.csproj">
+      <Project>{aebbcbb3-7fa1-4721-bf9c-b7ca0b2401d5}</Project>
+      <Name>Milvaneth.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

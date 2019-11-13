@@ -1,0 +1,227 @@
+﻿<Window x:Class="Milvaneth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Milvaneth"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        MinWidth="900" MinHeight="500"
+        Title="Milvaneth" Width="900" Height="500" Icon="milvaneth_small.ico">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="#01FFFFFF" Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" >
+            <DockPanel Height="18" Margin="0,0,0,0"/>
+            <DockPanel x:Name="ItemTab" Height="48" Margin="0,0,0,0" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Rectangle Width="4" Height="24" Margin="0,0,12,0">
+                        <Rectangle.Style>
+                            <Style TargetType="{x:Type Rectangle}">
+                                <Setter Property="Fill" Value="Transparent"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding UiActiveTab}" Value="0">
+                                        <Setter Property="Fill" Value="#0078D7"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                    <fa:ImageAwesome Icon="ShoppingCart" Height="13" Width="13" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,0,18,0"/>
+                    <TextBlock Text="物品" VerticalAlignment="Center" FontSize="14"/>
+                </StackPanel>
+                <DockPanel.Style>
+                    <Style TargetType="{x:Type DockPanel}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1E000000"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding UiActiveTab}" Value="0">
+                                <Setter Property="Background" Value="#32000000"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+            </DockPanel>
+
+            <DockPanel Height="35" Margin="16,5,16,5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Text="{Binding UiSearchLine, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" Height="31" Margin="0,0,0,0" 
+                             Name="SearchBox" Grid.Column="0" hc:InfoElement.Placeholder="搜索物品" Style="{StaticResource TextBoxExtend}">
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Return" 
+                                        Command="{Binding UiSearchLineEnterCommand}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                    <Button BorderThickness="0" DockPanel.Dock="Left" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                            Height="25" Width="25" Margin="0,0,5,0" Grid.Column="0" Background="Transparent" Click="Button_Click">
+                        <fa:FontAwesome Name="SearchIcon">
+                            <fa:FontAwesome.Style>
+                                <Style TargetType="{x:Type fa:FontAwesome}">
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="Icon" Value="Times"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="#0078D7"/>
+                                        </Trigger>
+                                        <DataTrigger Binding="{Binding IsFocused, ElementName=SearchBox}" Value="False">
+                                            <Setter Property="Foreground" Value="#918E8B"/>
+                                            <Setter Property="Icon" Value="Search"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </fa:FontAwesome.Style>
+                        </fa:FontAwesome>
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="SnapsToDevicePixels" Value="true"/>
+                                <Setter Property="OverridesDefaultStyle" Value="true"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Name="Border" CornerRadius="0" BorderThickness="0" Background="Transparent" BorderBrush="Transparent">
+                                                <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#0078D7"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding IsFocused, ElementName=SearchBox}" Value="False">
+                                        <Setter Property="Background" Value="#918E8B"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </DockPanel>
+
+            <DockPanel Height="50" Margin="14,0,0,8">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="更多选项" Foreground="DimGray" VerticalAlignment="Center" FontSize="14"/>
+                </StackPanel>
+            </DockPanel>
+
+            <DockPanel x:Name="SettingTab" Height="48" Margin="0,0,0,0" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Rectangle Width="4" Height="24" Margin="0,0,12,0">
+                        <Rectangle.Style>
+                            <Style TargetType="{x:Type Rectangle}">
+                                <Setter Property="Fill" Value="Transparent"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding UiActiveTab}" Value="1">
+                                        <Setter Property="Fill" Value="#0078D7"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                    <fa:ImageAwesome Icon="Gear" Height="13" Width="13" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,0,18,0"/>
+                    <TextBlock Text="设置" VerticalAlignment="Center" FontSize="14"/>
+                </StackPanel>
+                <DockPanel.Style>
+                    <Style TargetType="{x:Type DockPanel}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1E000000"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding UiActiveTab}" Value="1">
+                                <Setter Property="Background" Value="#32000000"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+            </DockPanel>
+
+            <DockPanel x:Name="LogsTab" Height="48" Margin="0,0,0,0" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Rectangle Width="4" Height="24" Margin="0,0,12,0">
+                        <Rectangle.Style>
+                            <Style TargetType="{x:Type Rectangle}">
+                                <Setter Property="Fill" Value="Transparent"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding UiActiveTab}" Value="2">
+                                        <Setter Property="Fill" Value="#0078D7"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                    <fa:ImageAwesome Icon="Clipboard" Height="13" Width="13" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,0,18,0"/>
+                    <TextBlock Text="日志" VerticalAlignment="Center" FontSize="14"/>
+                </StackPanel>
+                <DockPanel.Style>
+                    <Style TargetType="{x:Type DockPanel}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1E000000"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding UiActiveTab}" Value="2">
+                                <Setter Property="Background" Value="#32000000"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+            </DockPanel>
+
+            <DockPanel x:Name="AboutTab" Height="48" Margin="0,0,0,0" MouseDown="GeneralTab_MouseDown" MouseUp="GeneralTab_MouseUp">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Rectangle Width="4" Height="24" Margin="0,0,12,0">
+                        <Rectangle.Style>
+                            <Style TargetType="{x:Type Rectangle}">
+                                <Setter Property="Fill" Value="Transparent"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding UiActiveTab}" Value="3">
+                                        <Setter Property="Fill" Value="#0078D7"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                    <fa:ImageAwesome Icon="InfoCircle" Height="13" Width="13" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,0,18,0"/>
+                    <TextBlock Text="关于" VerticalAlignment="Center" FontSize="14"/>
+                </StackPanel>
+                <DockPanel.Style>
+                    <Style TargetType="{x:Type DockPanel}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#1E000000"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding UiActiveTab}" Value="3">
+                                <Setter Property="Background" Value="#32000000"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+            </DockPanel>
+        </StackPanel>
+        <Grid Grid.Column="1" Background="White">
+            <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+
+</Window>

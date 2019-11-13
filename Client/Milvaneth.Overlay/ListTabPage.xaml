@@ -1,0 +1,58 @@
+﻿<Page x:Class="Milvaneth.Overlay.ListTabPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Milvaneth.Overlay"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListTabPage">
+
+    <Grid>
+        <DataGrid ItemsSource="{Binding BindingCollection}" Name="ElementView" 
+                          HeadersVisibility="Column" AutoGenerateColumns="False"
+                          Background="Transparent" RowBackground="Transparent" RowHeight="20" IsReadOnly="True"
+                          HorizontalGridLinesBrush="#30000000" VerticalGridLinesBrush="#30000000" GridLinesVisibility="Horizontal"
+                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontWeight" Value="DemiBold" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                </Style>
+                <Style BasedOn="{StaticResource {x:Type DataGridCell}}" TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontWeight" Value="Normal" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#60000000" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=HqMark}" Header="HQ"  Width="1.25*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <!--<DataGridTextColumn Binding="{Binding Path=Materia}" Header="魔晶石"  Width="5*" />-->
+                <!--<DataGridTextColumn Binding="{Binding Path=MateriaCount}" Header="魔晶石数量"  Width="3*" />-->
+                <DataGridTextColumn Binding="{Binding Path=UnitPrice, StringFormat={}{0:N0}}" Header="单价"  Width="3*" />
+                <DataGridTextColumn Binding="{Binding Path=Quantity, StringFormat={}{0:N0}}" Header="数量"  Width="1.5*" />
+                <DataGridTextColumn Binding="{Binding Path=TotalPrice, StringFormat={}{0:N0}}" Header="净价"  Width="3*" />
+                <DataGridTextColumn Binding="{Binding Path=Tax, StringFormat={}{0:N0}}" Header="试算税额"  Width="3*" />
+                <DataGridTextColumn Binding="{Binding Path=TotalPriceAfterTax, StringFormat={}{0:N0}}" Header="总价"  Width="3*" />
+                <DataGridTextColumn Binding="{Binding Path=Server}" Header="服务器"  Width="2.5*" />
+                <DataGridTextColumn Binding="{Binding Path=Retainer}" Header="雇员名"  Width="5*" />
+                <DataGridTextColumn Binding="{Binding Path=UpdateTime}" Header="更新时间"  Width="2.5*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,4 +1,4 @@
-# Milvaneth
+# Milvaneth (Open Source)
 
 Project Milvaneth, named after [Milvaneth Sacrarium in Ul'dah](https://ffxiv.gamerescape.com/wiki/Milvaneth_Sacrarium), is the Chinese version of cross-world market infomation sharing platform (just like mogboard.com). Which, since there is currently no Companion App available for Chinese players (though Live Letter CN said it's WIP months ago), Milvaneth will develop a separate market data fetching technology, and will support Companion App CN API as soon as possible once it is released.
 
@@ -10,35 +10,23 @@ If there is a content difference, the Chinese version of README shall prevail.
 
 如存在内容差异，以中文版本的 README 为准。
 
-# Open source policy
+# Status Quo
 
-Due to the possibility of abuse of related technologies, Milvaneth will adopt a semi-open source strategy:
+For a variety of reasons, my overall personal situation has not been able to reach the baseline of operating this project as a public service independently. Therefore, it is decided to disclose the source code of this project for reference.
 
-1. Dual-use components with no currently open sourced alternatives, such as memory analyzers and some other components, will have access restrictions on source code and may apply anti-reverse engineering measures on object code. (\*)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to set up a free or charged service based on the modified or unmodified version of this project.
 
-2. Implementations of predictive or statistical algorithms, if any, will be open source if the algorithm itself has been made public.
+Milvaneth's source code is released under the MIT/X11 license.
 
-3. Components that do not meet the above criteria, such as packet analyzers and user interface parts, will be open source.
+# Maintance
 
-(\*) Once an open source alternative appears, the corresponding component will be made public.
+This project will no longer be updated when the FFXIV (CN) game update. But anyone can submit PRs and Issues for the project.
 
-Milvaneth's source code is expected to be released under the MIT/X11 license.
+Current version of Milvaneth is ready for FFXIV (CN) 5.0x.
 
-# About the service
+As it is modified before publish, the source code is not guranteed to be bug-free.
 
-Milvaneth service will be public available and free-to-use. It may accept donations after formal operation.
-
-Since players in CN region do not need to pay for the base game and expansion packs, and per-account cost is $0.09/hr playtime. The estimated operating cost of Milvaneth will be lower than similar services in JP/US/EU regions.
-
-# Time frame
-
-Test has started.
-
-Will release on 10/15/2019
-
-# TODOs
-
-Goals listed here will be implemented step by step after first release:
+# BETTERDOs
 
 - [ ] Website interface
 

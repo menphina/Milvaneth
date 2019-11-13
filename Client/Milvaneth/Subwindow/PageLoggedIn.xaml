@@ -1,0 +1,28 @@
+﻿<Page x:Class="Milvaneth.Subwindow.PageLoggedIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Milvaneth.Subwindow"
+      mc:Ignorable="d" 
+      d:DesignHeight="280" d:DesignWidth="600"
+      Title="PageLoggedIn">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Name="NameDisplay" Text="已登录" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button Content="登出账户" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="270" Height="30" Click="Button_Click"/>
+            <Button Content="修改密码" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="270" Height="30" Click="Button_Click_2"/>
+            <Button Content="修改信息" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="270" Height="30" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Page>
