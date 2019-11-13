@@ -18,6 +18,18 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 Milvaneth's source code is released under the MIT/X11 license.
 
+# Projects
+
+Milvaneth.Cmd: A robust state machine to handle various suitation of the game (not started / in lobby / in world / quitting). Support starting / stopping network reader and memory reader at proper moment. Can be associated with a game process safely at any time.
+
+Thaliak: Game memory reader for character info and inventory.
+
+Thaliak.Network: Game network reader for market info and other information.
+
+Thaliak.Writer: Signatures, Packet Ids, and Miscellaneous.
+
+Milvaneth.Server: A market data CRUD implemention.
+
 # Maintance
 
 This project will no longer be updated when the FFXIV (CN) game update. But anyone can submit PRs and Issues for the project.
